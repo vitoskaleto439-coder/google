@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в аккаунт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: white;
+            padding: 32px;
+            width: 340px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4285f4;
+            margin-bottom: 8px;
+        }
+        p {
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        button:hover {
+            background: #357ae8;
+        }
+        .message {
+            margin-top: 15px;
+            color: #b00020;
+            display: none;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">Google</div>
+        <p>Войдите в аккаунт</p>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Пароль">
+        <button onclick="showMessage()">Войти</button>
+        <div class="message" id="msg">
+            ⚠ Это учебная демонстрация фишингового сайта.<br>
+            Данные не сохраняются и никуда не передаются.
+        </div>
+        <div class="footer">
+            Учебный проект
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('msg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
